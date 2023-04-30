@@ -14,7 +14,6 @@ export default async function Home() {
   
   return (
     <>
-      <Header />
       <main>
         <div className="container mx-auto px-4 py-4 md:py-12">          
           <div className="flex flex-wrap -mx-4">

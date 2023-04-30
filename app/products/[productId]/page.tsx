@@ -13,8 +13,6 @@ export default async function Product({params: {productId}}: {
     })
     
     return (
-        <div>
-            <div>{product && product.title}</div>
-        </div>
+        <div>{product && product.title}</div>
     )
 }
