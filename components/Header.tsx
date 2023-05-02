@@ -5,7 +5,7 @@ export default function Header() {
     return (
         <header className="shadow px-4 py-4 flex items-center justify-between">
             <div>
-                <Link href="/">Aaron's Shop</Link>
+                <Link href="/">NASTY</Link>
             </div>
             <CartIcon />
         </header>
