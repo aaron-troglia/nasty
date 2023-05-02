@@ -1,3 +1,4 @@
+import CartProvider from '@/context/CartProvider'
 import './globals.css'
 import Header from "@/components/Header"
 
@@ -14,10 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main className="container px-4 mx-auto">
-          {children}
-        </main>
+        <CartProvider>
+          <Header />
+          <main className="container px-4 mx-auto">
+            {children}
+          </main>
+        </CartProvider>
       </body>
     </html>
   )

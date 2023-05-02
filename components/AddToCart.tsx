@@ -1,10 +1,10 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { CartContext } from "@/context/CartProvider"
 
 export default function AddToCart() {
-    const [cart, setCart] = useState(0)
-
+    const {cart, setCart} = useContext(CartContext)
     const addToCart = () => {
         const newCart = cart + 1
         setCart(newCart)
@@ -13,7 +13,6 @@ export default function AddToCart() {
     return (
         <>
             <div onClick={() => addToCart()} className="btn btn-primary">Add To Cart</div>
-            Cart count: {cart}
         </>
     )
 }
