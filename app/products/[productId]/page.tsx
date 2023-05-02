@@ -1,4 +1,5 @@
 import prisma from "@/utils/prisma";
+import AddToCart from "@/components/AddToCart";
 
 export default async function Product({params: {productId}}: {
     params: {
@@ -19,8 +20,10 @@ export default async function Product({params: {productId}}: {
             )}
 
             {product?.description && (
-                <div>{product.description}</div>
+                <div className="mb-4">{product.description}</div>
             )}
+
+            <AddToCart />
         </div>
     )
 }
