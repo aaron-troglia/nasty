@@ -2,10 +2,16 @@
 
 import {useContext} from 'react'
 import { CartContext } from "@/context/CartProvider"
+import { Products } from '@prisma/client'
+
+type CartStateContext = {
+    cart: Products[],
+    setCart: (p: Products[]) => void
+}
 
 export default function CartBasket() {
 
-    const {cart, setCart} = useContext(CartContext)
+    const {cart} = useContext<CartStateContext>(CartContext)
     
     return (
         <div>
