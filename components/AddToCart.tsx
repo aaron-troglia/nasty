@@ -2,12 +2,12 @@
 
 import { useState, useContext } from "react"
 import { CartContext } from "@/context/CartProvider"
+import { Products } from "@prisma/client"
 
-export default function AddToCart() {
+export default function AddToCart({product}: {product: Products}) {
     const {cart, setCart} = useContext(CartContext)
     const addToCart = () => {
-        const newCart = cart + 1
-        setCart(newCart)
+        setCart([...cart, product])
     }
     
     return (

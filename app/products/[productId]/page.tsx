@@ -23,7 +23,7 @@ export default async function Product({params: {productId}}: {
                 <div className="mb-4">{product.description}</div>
             )}
 
-            <AddToCart />
+            <AddToCart product={product} />
         </div>
     )
 }
